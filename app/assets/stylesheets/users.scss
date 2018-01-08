@@ -2,7 +2,56 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.navbar {
-  min-height: 38px;
-  background-color: #f55e55;
+$lightblue : #87e0fd; 	/* Here's how you assign the values to a variable */
+$darkblue : #2cafe3;
+$cpad: 20px;		/* Variables are not limited to colors, you can use it to store values too*/
+$lightgreen: #b7cbbf;
+$peach: #f5dabd;
+$pink: #f9a799;
+$strongpink: #fe4365;
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+	//background-image: -webkit-linear-gradient(top, $lightgreen  42%, $peach 100%);
+	//background-image: -moz-linear-gradient(top, $lightblue  42%, $darkblue 100%);
+	//background-attachment:fixed;
+	background-color: $lightgreen;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: $pink;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: $strongpink;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 30px;
+    @include centerer;
 }
