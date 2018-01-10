@@ -1,0 +1,12 @@
+- if flash[:notice]
+  .notice= flash[:notice]
+= @user.inspect
+
+%div
+  %p
+    %strong= "E-mail:"
+    = @user.email
+
+  %p
+    %strong= "Name:"
+    = @user.username

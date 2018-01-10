@@ -18,10 +18,10 @@ $strongpink: #fe4365;
 }
 
 body {
-	//background-image: -webkit-linear-gradient(top, $lightgreen  42%, $peach 100%);
-	//background-image: -moz-linear-gradient(top, $lightblue  42%, $darkblue 100%);
-	//background-attachment:fixed;
-	background-color: $lightgreen;
+	background-image: -webkit-linear-gradient(top, $lightgreen  42%, $peach 100%);
+	background-image: -moz-linear-gradient(top, $lightblue  42%, $darkblue 100%);
+	background-attachment:fixed;
+	//background-color: $lightgreen;
 }
 
 input, select {
@@ -32,6 +32,7 @@ input, select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 20px;
 }
 
 input[type=submit] {
