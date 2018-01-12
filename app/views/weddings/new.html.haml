@@ -1,0 +1,9 @@
+%div
+	= form_for @wedding, url: {action: "create"} do |f|
+		= f.label :wedding_date, "Date:"
+		= f.datetime_local_field :wedding_date
+		= f.label :first_partner, "First partner:"
+		= f.text_field :first_partner
+		= f.label :second_partner, "Second partner:"
+		= f.text_field :second_partner
+		= f.submit "Create"
