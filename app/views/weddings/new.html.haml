@@ -1,4 +1,4 @@
-%div
+.form
 	= form_for @wedding, url: {action: "create"} do |f|
 		= f.label :wedding_date, "Date:"
 		= f.datetime_local_field :wedding_date
