@@ -8,10 +8,11 @@ class UsersController < ApplicationController
     @user = User.new(user_parameters)
     if @user.save
       flash[:notice] = "Post successfully created"
+      redirect_to @user
     else
       flash[:notice] = "Error"
+      render :new
     end
-    redirect_to @user
   end
 
   def show
