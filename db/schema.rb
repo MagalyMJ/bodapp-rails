@@ -24,12 +24,13 @@ ActiveRecord::Schema.define(version: 20180111003133) do
   end
 
   create_table "weddings", force: :cascade do |t|
-    t.integer "userid"
     t.datetime "wedding_date"
-    t.string "first_couple"
-    t.string "second_couple"
+    t.string "first_partner"
+    t.string "second_partner"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_weddings_on_user_id"
   end
 
 end

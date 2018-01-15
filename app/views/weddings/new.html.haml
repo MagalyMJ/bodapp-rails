@@ -1,5 +1,12 @@
+- if flash[:notice]
+	.error= flash[:notice]
+
+.warning= @wedding.errors.messages.inspect
+
 .form
 	= form_for @wedding, url: {action: "create"} do |f|
+		= f.label :user_id
+		= f.select :user_id, options_for_select(User.all.map{|s|[s.username, s.id]})
 		= f.label :wedding_date, "Date:"
 		= f.datetime_local_field :wedding_date
 		= f.label :first_partner, "First partner:"
