@@ -42,3 +42,7 @@
 	background-color: #FFBABA;
 	background-image: url('error.png');
 }
+
+.title {
+	text-align: center;
+}

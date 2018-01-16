@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$lightgrey: #f5f5f5;
+$lightbrown: #d8c8b8;
+$drygreen: #83af9b;
+
+// header
 #wedding {
 	display: flex;
 	flex-direction: column;
@@ -27,3 +32,90 @@
 	font-size: 150%;
 	font-style: italic;
 }
+
+// body
+.weddingbody {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 5%;
+}
+
+// calendar
+.events {
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+	min-width: 20%;
+	max-width: 25%;
+}
+
+.event {
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	-webkit-box-shadow: inset 0px -4px 8px 0px rgba(199,197,199,0.34);
+	-moz-box-shadow: inset 0px -4px 8px 0px rgba(199,197,199,0.34);
+	box-shadow: inset 0px -4px 8px 0px rgba(199,197,199,0.34);
+}
+
+.event:hover {
+	cursor: pointer;
+	background-color: $lightgrey;
+}
+
+.date {
+	display: grid;
+	grid-template-areas:
+    'month month month '
+    'nday nday .'
+    'nday nday .'
+    'nday nday .'
+    'wday wday .';
+	width: 25%;
+	margin: 2px;
+	border-radius: 4px;
+	background-color: $lightbrown;
+}
+
+.content {
+	width: 75%;
+	padding-left: 4px;
+}
+
+#wday {
+	grid-area: wday;
+	font-size: 20%;
+	text-align: center;
+}
+
+#nday {
+	grid-area: nday;
+	font-size: 170%;
+	text-align: center;
+}
+
+#month {
+	grid-area: month;
+	font-size: 70%;
+	text-align: center;
+}
+
+#year1, #year2, #year3, #year4{
+  	font-size: 20%;
+}
+
+// todolist
+.todolist {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	padding: 5px;
+	min-width: 20%;
+	max-width: 25%;
+}
+
+#weddingtitle {
+	background-color: $drygreen;
+}
+
