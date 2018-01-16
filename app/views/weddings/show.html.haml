@@ -1,0 +1,9 @@
+- if flash[:notice]
+	.success= flash[:notice]
+
+#wedding
+	#couple
+		%label= @wedding.first_partner+" & "+@wedding.second_partner
+
+	#date
+		%label= @wedding.wedding_date.strftime("%A %B %d, %Y at %I:%M %p")

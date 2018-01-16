@@ -15,9 +15,13 @@ class WeddingsController < ApplicationController
 		end
 	end
 
+	def show
+		@wedding = Wedding.find(params[:id])
+	end
+
 	private
 
-	def wedding_parameters
-		params.require(:wedding).permit(:wedding_date, :first_partner, :second_partner, :user_id)
-	end
+		def wedding_parameters
+			params.require(:wedding).permit(:wedding_date, :first_partner, :second_partner, :user_id)
+		end
 end
