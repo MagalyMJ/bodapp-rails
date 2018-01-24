@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   get 'weddings/new', to: 'weddings#new', as: 'new_wedding'
   post 'weddings/create', to: 'weddings#create', as: 'create_wedding'
   get 'weddings/:id', to: 'weddings#show', at: 'wedding'
+
+  #events
+  get 'events', to: 'events#index', as: 'events'
   
 end
