@@ -11,14 +11,14 @@ $drygreen: #83af9b;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	background-color: pink;
+	//background-color: pink;
 	width: 40%;
 	margin: auto;
 	padding: 10px;
 }
 
 #couple {
-	color: white;
+	color: pink;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 550%;
@@ -53,29 +53,36 @@ $drygreen: #83af9b;
 .event {
 	display: flex;
 	flex-direction: row;
-	background-color: white;
-	-webkit-box-shadow: inset 0px -4px 8px 0px rgba(199,197,199,0.34);
-	-moz-box-shadow: inset 0px -4px 8px 0px rgba(199,197,199,0.34);
-	box-shadow: inset 0px -4px 8px 0px rgba(199,197,199,0.34);
+	background-color: #eee;
+	//-webkit-box-shadow: inset 0px -4px 8px 0px rgba(199,197,199,0.34);
+	//-moz-box-shadow: inset 0px -4px 8px 0px rgba(199,197,199,0.34);
+	//box-shadow: inset 0px -4px 8px 0px rgba(199,197,199,0.34);
+}
+
+.event:nth-child(odd) {
+    background: white;
 }
 
 .event:hover {
 	cursor: pointer;
-	background-color: $lightgrey;
+	background-color: #ddd;
 }
 
 .date {
 	display: grid;
 	grid-template-areas:
-    'month month month '
-    'nday nday .'
-    'nday nday .'
-    'nday nday .'
-    'wday wday .';
+    'month month year1 '
+    'nday nday year2'
+    'nday nday year3'
+    'wday wday year4';
 	width: 25%;
-	margin: 2px;
-	border-radius: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
 	background-color: $lightbrown;
+}
+
+.event:nth-child(odd) .date{
+    background: #e2ddd9;
 }
 
 .content {
@@ -93,6 +100,7 @@ $drygreen: #83af9b;
 	grid-area: nday;
 	font-size: 170%;
 	text-align: center;
+	font-style: italic;
 }
 
 #month {
@@ -101,21 +109,34 @@ $drygreen: #83af9b;
 	text-align: center;
 }
 
-#year1, #year2, #year3, #year4{
+#year1 {
+	grid-area: year1;
   	font-size: 20%;
 }
 
-// todolist
-.todolist {
-	display: flex;
-	flex-direction: column;
-	background-color: white;
-	padding: 5px;
-	min-width: 20%;
-	max-width: 25%;
+#year2 {
+	grid-area: year2;
+  	font-size: 20%;
+}
+
+#year3 {
+	grid-area: year3;
+  	font-size: 20%;
+}
+
+#year4 {
+	grid-area: year4;
+  	font-size: 20%;
 }
 
 #weddingtitle {
 	background-color: $drygreen;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: space-around;
+	background-color: pink;
 }
 
