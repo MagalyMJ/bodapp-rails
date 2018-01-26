@@ -1,3 +1,100 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.simple-calendar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+
+  .calendar-heading {
+  	display: flex;
+  	justify-content: space-around;
+  	margin-bottom: 10px;
+  	padding: 10px;
+  }
+
+  .calendar-title {
+  	font-style: italic;
+  	font-size: 150%;
+  }
+
+  a:link, a:visited {
+	background-color: #d1aca4;
+	color: white;
+	padding: 5px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 4px;
+	width: 5%;
+  }
+
+
+  a:hover, a:active {
+	background-color: #dfaeaf;
+  }
+  
+  table {
+    max-width: 100%;
+    width: 100%;
+    max-height: 93%;
+    height: 93%;
+  }
+
+  thead {
+  	background-color: lavender;
+  }
+
+  td {
+    padding: 6px;
+    vertical-align: top;
+    width: 14%;
+    text-align: right;
+  }
+
+  .day {
+  	background-color: ghostwhite;
+  }
+
+  /*.wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+  */
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {
+  	background-color: gainsboro;
+  	opacity: 0.5;
+  }
+  .next-month { 
+  	background-color: gainsboro;
+  	opacity: 0.5;
+  }
+  .current-month {}
+
+  .has-events {
+  	background-color: #ece5ce;
+  }
+
+  .has-events div {
+  	background-color: white;
+  	border-radius: 4px;
+  	padding: 4px;
+  	text-align: left;
+  }
+
+  .today {
+  	background-color: #e08f79;
+  }
+}
